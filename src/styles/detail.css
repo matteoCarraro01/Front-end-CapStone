@@ -1,0 +1,73 @@
+.detail-page {
+    background: #020617;
+    color: white;
+    padding: 40px;
+}
+
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(6px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: rgba(51, 65, 85, 0.8);
+    transform: translateX(-4px);
+}
+
+.detail-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    background: #020617;
+    border-radius: 12px;
+}
+
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.price-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.discount {
+    background: #ff4d4d;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price {
+    color: #00ff88;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.buy-btn {
+    background: #ff6600;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 220px;
+}
+
+
+.detail-body {
+    margin-top: 40px;
+}

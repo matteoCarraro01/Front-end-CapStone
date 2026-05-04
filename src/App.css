@@ -1,0 +1,25 @@
+body {
+    background-color: #121212;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.detail-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+/* Star.jsx css */
+.stars {
+    display: flex;
+    gap: 5px;
+}
+
+.star {
+    color: #444;
+    font-size: 16px;
+}
+
+.star.active {
+    color: gold;
+}
