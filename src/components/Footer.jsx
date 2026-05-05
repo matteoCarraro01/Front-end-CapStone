@@ -10,7 +10,7 @@ export default function Footer() {
 
 
                     <Col md={4}>
-                        <h5>⭐ Trustpilot</h5>
+                        <h5> Trustpilot</h5>
                         <p>TrustScore 4.7 • 800k recensioni</p>
                     </Col>
 

@@ -14,6 +14,30 @@ export default function GameDetail() {
     const navigate = useNavigate();
     const [game, setGame] = useState(null);
     const { addToCart } = useContext(CartContext);
+    const flyToCart = (e) => {
+        const img = document.querySelector(".game-img");
+
+        const clone = img.cloneNode(true);
+        clone.style.position = "fixed";
+        clone.style.top = img.getBoundingClientRect().top + "px";
+        clone.style.left = img.getBoundingClientRect().left + "px";
+        clone.style.width = "200px";
+        clone.style.zIndex = "9999";
+        clone.style.transition = "all 0.7s ease";
+
+        document.body.appendChild(clone);
+
+        setTimeout(() => {
+            clone.style.top = "20px";
+            clone.style.left = "90%";
+            clone.style.width = "40px";
+            clone.style.opacity = "0";
+        }, 50);
+
+        setTimeout(() => {
+            clone.remove();
+        }, 700);
+    };
 
     useEffect(() => {
         const fetchGame = async () => {
@@ -51,7 +75,7 @@ export default function GameDetail() {
                             <motion.img
                                 src={game.image}
                                 alt={game.title}
-                                className="detail-img"
+                                className="game-img"
                                 initial={{ opacity: 0, x: -50 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6 }}
@@ -77,7 +101,10 @@ export default function GameDetail() {
 
                                 <p className="meta">{game.genre}</p>
 
-                                <button onClick={() => addToCart(game)} className="buy-btn">
+                                <button onClick={(e) => {
+                                    flyToCart(e);
+                                    addToCart(game);
+                                }} className="buy-btn">
                                     <FaShoppingCart /> Aggiungi al carrello
                                 </button>
                             </motion.div>

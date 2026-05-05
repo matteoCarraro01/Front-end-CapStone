@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import GameDetail from './pages/GameDetail';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -23,6 +25,9 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/game/:id" element={<GameDetail />} />
                         <Route path="/cart" element={<Cart />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+
                     </Routes>
                 </div>
                 <Footer />

@@ -4,12 +4,15 @@ import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { AuthContext } from "../context/AuthContext";
+
 
 
 
 export default function MyNavbar({ query, setQuery, onSearch }) {
     const navigate = useNavigate();
-    const { cart } = useContext(CartContext);
+    const { cart, justAdded } = useContext(CartContext);
+    const { user, logout } = useContext(AuthContext);
     return (
         <div className="ig-navbar">
             <Container className="ig-navbar-inner">
@@ -40,8 +43,25 @@ export default function MyNavbar({ query, setQuery, onSearch }) {
                     </button>
 
                     <div className="nav-icons">
-                        <FaShoppingCart onClick={() => navigate("/cart")} className="icon" />
-                        <FaUser className="icon" />
+                        <div className={`cart-icon ${justAdded ? "cart-bounce" : ""}`}
+                            onClick={() => navigate("/cart")}>
+                            <FaShoppingCart className="icon" />
+
+                            {cart.length > 0 && (
+                                <span className="cart-badge">{cart.length}</span>
+                            )}
+
+                        </div>
+                        {user ? (
+                            <span onClick={logout} className="icon">
+                                Logout
+                            </span>
+                        ) : (
+                            <FaUser onClick={() => navigate("/login")} className="icon" />
+
+                        )
+                        }
+
                     </div>
                 </div>
 
