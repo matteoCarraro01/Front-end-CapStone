@@ -4,6 +4,7 @@ import './App.css';
 import GameDetail from './pages/GameDetail';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import Cart from './pages/Cart';
 
 
 
@@ -21,7 +22,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/game/:id" element={<GameDetail />} />
-
+                        <Route path="/cart" element={<Cart />} />
                     </Routes>
                 </div>
                 <Footer />

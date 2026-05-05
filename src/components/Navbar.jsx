@@ -1,10 +1,15 @@
 import { Container } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 
 export default function MyNavbar({ query, setQuery, onSearch }) {
+    const navigate = useNavigate();
+    const { cart } = useContext(CartContext);
     return (
         <div className="ig-navbar">
             <Container className="ig-navbar-inner">
@@ -35,7 +40,7 @@ export default function MyNavbar({ query, setQuery, onSearch }) {
                     </button>
 
                     <div className="nav-icons">
-                        <FaShoppingCart className="icon" />
+                        <FaShoppingCart onClick={() => navigate("/cart")} className="icon" />
                         <FaUser className="icon" />
                     </div>
                 </div>

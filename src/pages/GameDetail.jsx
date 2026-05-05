@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getGameDetails } from "../services/api";
+import { CartContext } from "../context/CartContext";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaShoppingCart, FaArrowLeft } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -12,6 +13,7 @@ export default function GameDetail() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [game, setGame] = useState(null);
+    const { addToCart } = useContext(CartContext);
 
     useEffect(() => {
         const fetchGame = async () => {
@@ -75,7 +77,7 @@ export default function GameDetail() {
 
                                 <p className="meta">{game.genre}</p>
 
-                                <button className="buy-btn">
+                                <button onClick={() => addToCart(game)} className="buy-btn">
                                     <FaShoppingCart /> Aggiungi al carrello
                                 </button>
                             </motion.div>
