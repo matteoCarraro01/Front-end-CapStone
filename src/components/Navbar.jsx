@@ -5,7 +5,7 @@ import "../styles/navbar.css";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { AuthContext } from "../context/AuthContext";
-
+import logo from "../assets/LogoMatty.png";
 
 
 
@@ -19,7 +19,9 @@ export default function MyNavbar({ query, setQuery, onSearch }) {
 
 
                 <div className="ig-left">
-                    <span className="ig-logo">GameStore</span>
+                    <div className="ig-log-container">
+                        <img src={logo} alt="Logo Matty's Gaming" className="ig-logo-img" />
+                    </div>
                     <div className="ig-menu">
                         <span>PC</span>
                         <span>PlayStation</span>
