@@ -176,3 +176,96 @@
 .checkout-btn:hover {
     transform: scale(1.03);
 }
+
+
+
+/* recensioni */
+.reviews-section {
+    margin-top: 50px;
+    background: #07142c;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.reviews-section h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-form textarea {
+    background: #101826;
+    border: 1px solid #1f2a3d;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    min-height: 120px;
+    resize: none;
+    font-size: 15px;
+}
+
+.review-form select {
+    background: #101826;
+    color: white;
+    border: 1px solid #1f2a3d;
+    padding: 10px;
+    border-radius: 10px;
+    width: 180px;
+}
+
+.review-form button {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background: #ff9500;
+    transform: translateY(-2px);
+}
+
+.reviews-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: #101826;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #1f2a3d;
+    animation: fadeIn 0.4s ease;
+}
+
+.review-card h4 {
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    color: white;
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
