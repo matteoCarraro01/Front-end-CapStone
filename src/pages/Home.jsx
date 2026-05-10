@@ -38,10 +38,10 @@ export default function Home() {
                 onSearch={handleSearch}
             />
 
-            <Container fluid className="bg-dark text-white min-vh-100 p-4">
+            <Container fluid className="bg-dark text-white min-vh-100 px-2 py-3 px-md-4">
                 <Row>
                     {games.map((game) => (
-                        <Col key={game._id} xs={6} md={4} lg={3} xl={2} className="mb-4">
+                        <Col key={game._id} xs={6} sm={6} md={4} lg={3} xl={2} className="mb-4">
                             <div className="ig-card"
                                 onClick={() => navigate(`/game/${game._id}`)}
                             >

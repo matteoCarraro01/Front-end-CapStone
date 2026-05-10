@@ -5,17 +5,45 @@ import { motion } from "framer-motion";
 
 export default function Register() {
     const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const handleRegister = (e) => {
+    const handleRegister = async (e) => {
         e.preventDefault();
 
-        const newUser = { email };
+        try {
+            const response = await fetch(
+                "http://localhost:4001/auth/register",
+                {
+                    method: "POST",
 
-        login(newUser);
-        navigate("/");
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        username,
+                        email,
+                        password,
+                    }),
+                }
+            );
+
+            const data = await response.json();
+            console.log(data);
+
+            if (response.ok) {
+                login(data.user);
+
+                navigate("/");
+            } else {
+
+                alert(data.message);
+            }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
@@ -33,6 +61,17 @@ export default function Register() {
                 <p className="auth-subtitle">Unisciti a GameStore</p>
 
                 <input
+                required
+                    type="text"
+                    placeholder="Username"
+                    className="auth-input"
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+
+
+
+                <input
+                required
                     type="email"
                     placeholder="Email"
                     className="auth-input"
@@ -40,6 +79,7 @@ export default function Register() {
                 />
 
                 <input
+                required
                     type="password"
                     placeholder="Password"
                     className="auth-input"

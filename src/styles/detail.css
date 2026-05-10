@@ -269,3 +269,284 @@
         transform: translateY(0);
     }
 }
+
+.game-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .detail-page {
+        padding: 15px;
+    }
+
+    .detail-info h1 {
+        font-size: 2rem;
+    }
+
+    .buy-btn {
+        width: 100%;
+    }
+
+    .review-form textarea {
+        min-height: 120px;
+    }
+}
+
+
+/* RATING STARS */
+
+.rating-stars {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.15);
+}
+
+.star.active {
+    color: #ffb400;
+    filter: drop-shadow(0 0 8px rgba(255, 180, 0, 0.7));
+}
+
+
+/* REVIEWS SECTION */
+
+.reviews-section {
+    background: #02153a;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+/* REVIEW CARD */
+
+.review-card {
+    background: #071a3d;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+
+    transition: all 0.25s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,180,0,0.3);
+
+    box-shadow:
+        0 0 20px rgba(255,180,0,0.08);
+}
+
+/* HEADER */
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* AVATAR */
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff9900,
+        #ff5500
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    color: white;
+
+    box-shadow:
+        0 0 15px rgba(255,140,0,0.4);
+}
+
+/* USER INFO */
+
+.review-user-info h4 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+/* STARS */
+
+.review-stars {
+    display: flex;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.review-stars svg {
+    color: #ffb400;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,180,0,0.7));
+}
+
+/* TEXT */
+
+.review-text {
+    margin-top: 18px;
+    line-height: 1.7;
+    color: #d6d6d6;
+}
+
+/* FORM */
+
+.review-form textarea {
+    width: 100%;
+    min-height: 140px;
+
+    background: #07152e;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    resize: none;
+}
+
+.review-form textarea:focus {
+    outline: none;
+
+    border-color: rgba(255,180,0,0.4);
+
+    box-shadow:
+        0 0 15px rgba(255,180,0,0.12);
+}
+
+/* BUTTON */
+
+.review-form button {
+    width: 100%;
+    margin-top: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #ff9900,
+        #ff6600
+    );
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: 0.25s ease;
+}
+
+.review-form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(255,120,0,0.25);
+}
+
+
+/* REVIEW TOP */
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ACTIONS */
+
+.review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* DELETE BTN */
+
+.delete-review-btn {
+    background: transparent;
+    border: none;
+
+    color: #ff4d4d;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.delete-review-btn:hover {
+    transform: scale(1.15);
+
+    color: #ff1f1f;
+}
+
+/* REVIEW FOOTER */
+
+.review-footer {
+    margin-top: 15px;
+}
+
+/* LIKE BTN */
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.like-btn:hover {
+    background: rgba(255,180,0,0.1);
+
+    border-color: rgba(255,180,0,0.25);
+
+    transform: translateY(-1px);
+}
+
+.like-btn svg {
+    color: #ffb400;
+}

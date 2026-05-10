@@ -10,17 +10,46 @@ export default function Login() {
     const { login } = useContext(AuthContext);
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
 
-        const fakeUser = { email };
+        try {
+            const response = await fetch(
+                "http://localhost:4001/auth/login",
+                {
+                    method: "POST",
 
-        login(fakeUser);
-        navigate("/");
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    
+                    body: JSON.stringify({
+                        email,
+                        password,
+                    }), 
+                }
+            );
+            const data = await response.json();
+            
+            console.log(data);
+
+            if (response.ok) {
+                login(data.user);
+                navigate("/");
+
+                
+            } else {
+
+                alert(data.message);
+            }
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
         <div className="auth-container">
+            
             <motion.form
                 onSubmit={handleLogin}
                 className="auth-box"

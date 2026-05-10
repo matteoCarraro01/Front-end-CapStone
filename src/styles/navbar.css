@@ -187,3 +187,291 @@
     transform: scale(1.08);
     box-shadow: 0 0 25px rgba(255, 136, 0, 0.7);
 }
+
+/* MOBILE FIRST */
+
+.ig-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ig-search-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.ig-search {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+}
+
+.ig-search-btn {
+    white-space: nowrap;
+}
+
+.ig-menu {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+.ig-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.ig-menu span {
+    background: #141414;
+    padding: 8px 14px;
+    border-radius: 999px;
+    flex-shrink: 0;
+}
+
+.logout-btn {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .ig-navbar {
+        padding: 12px;
+    }
+
+    .ig-logo-img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .ig-search {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .ig-search-btn {
+        padding: 6px 14px;
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 20px;
+    }
+
+    .ig-menu span {
+        font-size: 13px;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+
+    .ig-search-container {
+        max-width: 500px;
+        margin-top: 0;
+    }
+
+    .ig-menu {
+        overflow: visible;
+    }
+}
+
+
+
+
+
+/* NAVBAR BASE */
+
+.ig-navbar {
+    background-color: #0a0a0a;
+    padding: 12px 20px;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+/* MOBILE FIRST */
+
+.ig-navbar-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ig-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ig-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* MENU */
+
+.ig-menu {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.ig-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.ig-menu span {
+    background: #141414;
+    padding: 8px 14px;
+    border-radius: 999px;
+    flex-shrink: 0;
+    color: #aaa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ig-menu span:hover {
+    color: white;
+    background: #1f1f1f;
+}
+
+/* SEARCH */
+
+.ig-search-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.ig-search {
+    flex: 1;
+    min-width: 0;
+    background-color: #1a1a1a;
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.ig-search-btn {
+    background-color: #ffb400;
+    border: none;
+    padding: 10px 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* ICONS */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* LOGO */
+
+.ig-logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* DESKTOP */
+
+@media (min-width: 992px) {
+
+    .ig-navbar-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ig-left {
+        flex-direction: row;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .ig-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .ig-search-container {
+        width: 320px;
+    }
+
+    .ig-menu {
+        overflow: visible;
+    }
+}
+
+
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff7a00,
+        #ffb347
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+
+    box-shadow: 0 0 12px rgba(255, 136, 0, 0.5);
+
+    transition: 0.3s;
+}
+
+.user-avatar:hover {
+    transform: scale(1.08);
+}
+
+.username-text {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.logout-text {
+    color: #ff7a00;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.logout-text:hover {
+    color: #ffb347;
+}
