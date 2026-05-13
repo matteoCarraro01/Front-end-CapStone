@@ -84,20 +84,23 @@ export default function GameDetail() {
         }
     };
 
-    const handleDeleteReview = async (indexToDelete) => {
+    const handleDeleteReview = async (reviewId) => {
 
         try {
             const response = await fetch(
-                `http://localhost:4001/games/${id}/reviews/${indexToDelete}`,
+                `http://localhost:4001/games/${id}/reviews/${reviewId}`,
                 {
                     method: "DELETE",
                 }
             );
 
-            const updatedGame = await response.json();
-
-            setReviews(updatedGame.comments);
-
+            if (response.ok) {
+                setReviews((prevReviews) =>
+                prevReviews.filter(
+                    review => review._id !== reviewId
+                )
+            );
+            }
         } catch (error) {
             console.log(error);
         }
@@ -250,7 +253,7 @@ export default function GameDetail() {
                                                 {user?.username === review.username && (
                                                     <button
                                                         className="delete-review-btn"
-                                                        onClick={() => handleDeleteReview(index)}
+                                                        onClick={() => handleDeleteReview(review._id)}
                                                     >
                                                         <FaTrash />
                                                     </button>
