@@ -1,0 +1,42 @@
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import GameDetail from './pages/GameDetail';
+import ManageGames from './pages/ManageGames';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+
+
+
+
+
+function App() {
+    return (
+        <BrowserRouter>
+            <div className='app-container'>
+
+                <div className='main-content'>
+
+
+
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/game/:id" element={<GameDetail />} />
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/manage-games" element={<ManageGames />} />
+
+                    </Routes>
+                </div>
+                <Footer />
+            </div>
+        </BrowserRouter>
+    )
+
+}
+
+export default App;

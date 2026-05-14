@@ -1,0 +1,561 @@
+.detail-page {
+    background: #020617;
+    color: white;
+    padding: 40px;
+}
+
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(6px);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.back-btn:hover {
+    background: rgba(51, 65, 85, 0.8);
+    transform: translateX(-4px);
+}
+
+.detail-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    background: #020617;
+    border-radius: 12px;
+}
+
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.price-box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.discount {
+    background: #ff4d4d;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.price {
+    color: #00ff88;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.back-home {
+    background: transparent;
+    border: 1px solid #2a3b55;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back-home:hover {
+    background: #ff7a00;
+    border-color: #ff7a00;
+}
+
+.buy-btn {
+    background: #ff6600;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 220px;
+}
+
+
+.detail-body {
+    margin-top: 40px;
+}
+
+
+
+
+/* css Carrello  */
+.cart-container {
+    padding: 40px;
+    color: white;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.cart-title {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+    transform: scale(1.02);
+}
+
+.cart-img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.price {
+    color: #00ffae;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty button {
+    background: #ff7a00;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #ff4d4d;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #ff7a00;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+    transform: scale(1.03);
+}
+
+
+
+/* recensioni */
+.reviews-section {
+    margin-top: 50px;
+    background: #07142c;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.reviews-section h2 {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-form textarea {
+    background: #101826;
+    border: 1px solid #1f2a3d;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+    min-height: 120px;
+    resize: none;
+    font-size: 15px;
+}
+
+.review-form select {
+    background: #101826;
+    color: white;
+    border: 1px solid #1f2a3d;
+    padding: 10px;
+    border-radius: 10px;
+    width: 180px;
+}
+
+.review-form button {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background: #ff9500;
+    transform: translateY(-2px);
+}
+
+.reviews-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-card {
+    background: #101826;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #1f2a3d;
+    animation: fadeIn 0.4s ease;
+}
+
+.review-card h4 {
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.review-card p {
+    color: white;
+    margin: 5px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+
+    .detail-page {
+        padding: 15px;
+    }
+
+    .detail-info h1 {
+        font-size: 2rem;
+    }
+
+    .buy-btn {
+        width: 100%;
+    }
+
+    .review-form textarea {
+        min-height: 120px;
+    }
+}
+
+
+/* RATING STARS */
+
+.rating-stars {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0 25px;
+}
+
+.star {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.star:hover {
+    transform: scale(1.15);
+}
+
+.star.active {
+    color: #ffb400;
+    filter: drop-shadow(0 0 8px rgba(255, 180, 0, 0.7));
+}
+
+
+/* REVIEWS SECTION */
+
+.reviews-section {
+    background: #02153a;
+    padding: 30px;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+/* REVIEW CARD */
+
+.review-card {
+    background: #071a3d;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 20px;
+
+    transition: all 0.25s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,180,0,0.3);
+
+    box-shadow:
+        0 0 20px rgba(255,180,0,0.08);
+}
+
+/* HEADER */
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* AVATAR */
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff9900,
+        #ff5500
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    color: white;
+
+    box-shadow:
+        0 0 15px rgba(255,140,0,0.4);
+}
+
+/* USER INFO */
+
+.review-user-info h4 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+}
+
+/* STARS */
+
+.review-stars {
+    display: flex;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+.review-stars svg {
+    color: #ffb400;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,180,0,0.7));
+}
+
+/* TEXT */
+
+.review-text {
+    margin-top: 18px;
+    line-height: 1.7;
+    color: #d6d6d6;
+}
+
+/* FORM */
+
+.review-form textarea {
+    width: 100%;
+    min-height: 140px;
+
+    background: #07152e;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    resize: none;
+}
+
+.review-form textarea:focus {
+    outline: none;
+
+    border-color: rgba(255,180,0,0.4);
+
+    box-shadow:
+        0 0 15px rgba(255,180,0,0.12);
+}
+
+/* BUTTON */
+
+.review-form button {
+    width: 100%;
+    margin-top: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #ff9900,
+        #ff6600
+    );
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 14px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+    transition: 0.25s ease;
+}
+
+.review-form button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(255,120,0,0.25);
+}
+
+
+/* REVIEW TOP */
+
+.review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* ACTIONS */
+
+.review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* DELETE BTN */
+
+.delete-review-btn {
+    background: transparent;
+    border: none;
+
+    color: #ff4d4d;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.delete-review-btn:hover {
+    transform: scale(1.15);
+
+    color: #ff1f1f;
+}
+
+/* REVIEW FOOTER */
+
+.review-footer {
+    margin-top: 15px;
+}
+
+/* LIKE BTN */
+
+.like-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.like-btn:hover {
+    background: rgba(255,180,0,0.1);
+
+    border-color: rgba(255,180,0,0.25);
+
+    transform: translateY(-1px);
+}
+
+.like-btn svg {
+    color: #ffb400;
+}
+
+.delete-review-btn{
+    transition:.4s;
+}
+
+.delete-review-btn:hover{
+    transform:scale(1.25) rotate(15deg);
+    color:#ff4444;
+}
