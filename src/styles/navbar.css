@@ -475,3 +475,18 @@
 .logout-text:hover {
     color: #ffb347;
 }
+
+.manage-btn{
+background:#ffb400;
+border:none;
+padding:8px 14px;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.manage-btn:hover{
+transform:scale(1.05);
+background:#ff9500;
+}

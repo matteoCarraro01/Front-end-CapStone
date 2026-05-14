@@ -34,6 +34,13 @@ export default function MyNavbar({ query, setQuery, onSearch }) {
           <span>PlayStation</span>
           <span>Xbox</span>
           <span>Nintendo Switch</span>
+          {user && (
+          <button className="manage-btn"
+          onClick={() => navigate("/manage-games")}
+          >
+            Gestisci
+          </button>
+          )}
         </div>
 
       </div>

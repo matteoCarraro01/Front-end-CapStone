@@ -34,7 +34,10 @@ export default function Login() {
             console.log(data);
 
             if (response.ok) {
-                login(data.user);
+                login({
+                    ...data.user,
+                token: data.token
+            });
                 navigate("/");
 
                 
