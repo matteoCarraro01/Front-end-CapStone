@@ -61,7 +61,7 @@
 // }
 
 
-const BASE_URL = "http://localhost:4001";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const getToken = () => {
     const user = JSON.parse(
