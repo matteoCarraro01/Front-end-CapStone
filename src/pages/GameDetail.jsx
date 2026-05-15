@@ -58,7 +58,7 @@ export default function GameDetail() {
         };
         try {
             const response = await fetch(
-                `http://localhost:4001/games/${id}/reviews`,
+                `${import.meta.env.VITE_BASE_URL}/games/${id}/reviews`,
                 {
                     method: "POST",
 
@@ -88,7 +88,7 @@ export default function GameDetail() {
 
         try {
             const response = await fetch(
-                `http://localhost:4001/games/${id}/reviews/${reviewId}`,
+                `${import.meta.env.VITE_BASE_URL}/games/${id}/reviews/${reviewId}`,
                 {
                     method: "DELETE",
                 }

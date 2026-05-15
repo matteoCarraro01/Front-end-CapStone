@@ -15,7 +15,7 @@ export default function Register() {
 
         try {
             const response = await fetch(
-                "http://localhost:4001/auth/register",
+                `${import.meta.env.VITE_BASE_URL}/auth/register`,
                 {
                     method: "POST",
 
