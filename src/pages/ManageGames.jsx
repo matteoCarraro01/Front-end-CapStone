@@ -261,6 +261,13 @@ export default function ManageGames() {
 
                                             setEditingId(game._id);
                                             setFormData(game);
+                                            setShowForm(true);
+
+                                            window.scrollTo({
+                                                top: 0,
+                                                behavior:"smooth"
+
+                                            });
 
                                         }}
                                     >
