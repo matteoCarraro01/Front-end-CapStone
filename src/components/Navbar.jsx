@@ -34,7 +34,7 @@ export default function MyNavbar({ query, setQuery, onSearch }) {
           <span>PlayStation</span>
           <span>Xbox</span>
           <span>Nintendo Switch</span>
-          {user && (
+          {user?.role === "admin" && (
           <button className="manage-btn"
           onClick={() => navigate("/manage-games")}
           >
