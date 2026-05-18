@@ -4,6 +4,7 @@ import { getGames, createGame, updateGame, deleteGame } from "../services/api";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaGamepad, FaTrash } from "react-icons/fa";
 import { FaPencil } from "react-icons/fa6";
+import toast from "react-hot-toast";
 import "../styles/manageGames.css"
 
 
@@ -44,9 +45,13 @@ export default function ManageGames() {
                 formData
             );
 
+            toast.success("🎮 Gioco modificato!");
+
 
         } else {
             await createGame(formData);
+
+            toast.success("🎮 Gioco aggiunto!");
 
         }
         loadGames();
@@ -281,6 +286,8 @@ export default function ManageGames() {
                                         onClick={async () => {
 
                                             await deleteGame(game._id);
+
+                                            toast.success("Gioco eliminato!")
 
                                             setGames(prev =>
                                                 prev.filter(
